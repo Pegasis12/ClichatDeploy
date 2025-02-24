@@ -19,7 +19,7 @@
   text-align: left;
 }
 
-.perguntas div{
+.perguntas div {
   background-color: rgb(21, 20, 20);
   border: solid 2px var(--cor-9);
   margin-bottom: 12px;
@@ -30,7 +30,7 @@
   display: inline-block;
   width: 14px;
   height: 6px;
-  background: url("../../Img/icones/seta-abrir.svg");
+  background: url("../../img/icones/seta-abrir.svg");
   transition: 0.3s;
 }
 
