@@ -10,6 +10,18 @@ function ativarLink(link) {
 }
 links.forEach(ativarLink);
 
+//menu header para ativar o after do a ao ser clicado
+const links2 = document.querySelectorAll(".header-menu-second li a");
+function ativarLink(link) {
+  const url = location.href;
+  const href = link.href;
+  // metodo includes verifica se tem uma parte doq esta escrito no texto dentro de outro texto
+  if (url.includes(href)) {
+    link.classList.add("ativo");
+  }
+}
+links2.forEach(ativarLink);
+
 //perguntas frequentes
 const perguntas = document.querySelectorAll(".perguntas button");
 
