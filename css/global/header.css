@@ -1,0 +1,74 @@
+.header-bg {
+  grid-area: header;
+  background: var(--cor-11);
+  border-bottom: solid 2px var(--cor-9);
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 12;
+}
+
+.header {
+  padding: 12px 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu-first {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.header ul {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.header-menu-first li a{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.header-menu-first li:hover .icon {
+  fill: var(--cor-p1); /* Mudando a cor do ícone quando o mouse passar sobre o li */
+}
+
+.header-botoes{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header-menu-first nav{
+    display: none;
+  }
+
+  .header {
+    padding: 8px 0px;
+  }
+
+  .header-menu-first img{
+    width: 120px;
+  }
+
+  .header {
+    padding: 12px 20px;
+  }
+}

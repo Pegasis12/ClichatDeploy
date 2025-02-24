@@ -1,0 +1,48 @@
+.conversas{
+  margin-bottom: 40px;
+}
+
+.conversas h1 {
+  margin-bottom: 40px;
+}
+
+.conversas-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.conversas-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.conversas-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.conversas-info p {
+  padding: 6px;
+  background: #1CD760;
+  justify-self: start;
+  border-radius: 10px;
+}
+
+@media(max-width: 1030px){
+  .conversas-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media(max-width: 1030px){
+  .conversas-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

@@ -1,0 +1,50 @@
+.aside {
+  grid-area: aside;
+  box-sizing: border-box;
+  position: fixed;
+  width: 260px;
+  top: 92px;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  border-right: solid 2px var(--cor-9);
+  padding: 32px;
+  background: var(--cor-11);
+}
+
+.aside li {
+  border: solid 2px var(--cor-9);
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.aside li:hover {
+  background: rgba(255, 255, 255, 0.199);
+}
+
+.aside li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-aside {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.aside-opcoes li:hover .icon-aside {
+  fill: var(
+    --cor-p1
+  ); /* Mudando a cor do ícone quando o mouse passar sobre o li */
+}
+
+@media (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+}

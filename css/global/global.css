@@ -1,0 +1,57 @@
+/* reset */
+body {
+  padding-top: 90px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: var(--cor-11);
+  display: grid;
+  grid-template-columns: 260px 1fr; /* Ajustei o número de colunas para 2 */
+  grid-template-areas:
+    "header header"
+    "aside content";
+}
+
+h1,
+ul,
+h3,
+h2,
+h4,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+Img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* atribui ao final de um arquivo jpg a borda de 4px*/
+Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"]{
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr; /* Ajustei o número de colunas para 2 */
+    grid-template-areas:
+      "header"
+      "content";
+  }
+  
+}

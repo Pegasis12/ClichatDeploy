@@ -1,0 +1,15 @@
+/* global */
+@import "./css/global/global.css";
+@import "./css/global/header.css";
+@import "./css/global/footer.css";
+@import "./css/global/aside.css";
+
+/* utilidades */
+@import "./css/utilidades/componentes.css";
+@import "./css/utilidades/cores.css";
+@import "./css/utilidades/tipografia.css";
+
+/* home */
+@import "./css/home/intro.css";
+@import "./css/home/conversas-card.css";
+@import "./css/home/perguntas.css";
