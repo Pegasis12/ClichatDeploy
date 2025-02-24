@@ -18,6 +18,7 @@
   font: 600 1rem/1.35 "Poppins", sans-serif;
   max-width: max-content;
   cursor: pointer;
+  border: solid 2px #76bafa;
 }
 
 .botao.secundario {
