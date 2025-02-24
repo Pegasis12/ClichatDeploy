@@ -10,6 +10,8 @@
   border-right: solid 2px var(--cor-9);
   padding: 32px;
   background: var(--cor-11);
+  display: flex;
+  flex-direction: column;
 }
 
 .aside li {
@@ -35,6 +37,13 @@
   width: 16px;
   height: 16px;
   fill: currentColor;
+}
+
+.copy-aside {
+  margin-top: auto;
+  padding-bottom: 80px; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center;
 }
 
 .aside-opcoes li:hover .icon-aside {
