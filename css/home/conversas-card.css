@@ -27,7 +27,8 @@
 .conversas-info p {
   padding: 6px;
   background: #1CD760;
-  justify-self: start;
+  align-self: start;
+  justify-self: left;
   border-radius: 10px;
 }
 
