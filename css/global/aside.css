@@ -39,11 +39,9 @@
   fill: currentColor;
 }
 
-.copy-aside {
-  margin-top: auto;
-  padding-bottom: 80px; /* Ajuste conforme necessário */
-  display: flex;
-  justify-content: center;
+
+.aside-opcoes {
+  flex-grow: 1; /* Faz com que essa parte ocupe o espaço restante */
 }
 
 .aside-opcoes li:hover .icon-aside {
@@ -52,7 +50,7 @@
   ); /* Mudando a cor do ícone quando o mouse passar sobre o li */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .aside {
     display: none;
   }

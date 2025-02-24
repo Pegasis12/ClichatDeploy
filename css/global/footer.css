@@ -5,8 +5,8 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 300px repeat(3, 1fr);
-  gap: 60px;
+  grid-template-columns: minmax(200px, 300px) 1fr 1fr 1fr;
+  gap: 20px;
   padding-top: 40px;
 }
 
@@ -32,7 +32,7 @@
   margin-top: 20px;
 }
 
-.footer-pagamentos{
+.footer-pagamentos {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@
   .footer-bg {
     border-top: solid 2px var(--cor-9);
     margin-top: 60px;
-  }  
+  }
 
   .footer > Img {
     display: none;
@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1150px) {
   .footer {
     grid-template-columns: 1fr;
     gap: 60px;

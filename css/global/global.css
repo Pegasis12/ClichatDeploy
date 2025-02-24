@@ -45,8 +45,9 @@ Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"]{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
+    padding-top: 130px;
     display: grid;
     grid-template-columns: 1fr; /* Ajustei o número de colunas para 2 */
     grid-template-areas:

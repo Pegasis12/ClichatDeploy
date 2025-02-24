@@ -39,11 +39,11 @@
   transform: rotate(180deg);
 }
 
-.js .perguntas dd {
+.perguntas dd {
   display: none;
 }
 
-.js .perguntas dd.ativa {
+.perguntas dd.ativa {
   display: block;
 }
 

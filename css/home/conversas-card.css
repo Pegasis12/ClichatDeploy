@@ -31,7 +31,7 @@
   border-radius: 10px;
 }
 
-@media(max-width: 1030px){
+@media(max-width: 1366px){
   .conversas-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -39,7 +39,7 @@
   }
 }
 
-@media(max-width: 1030px){
+@media(max-width: 1200px){
   .conversas-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

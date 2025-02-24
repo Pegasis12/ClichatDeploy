@@ -13,6 +13,14 @@
   padding: 12px 20px;
 }
 
+.ativo {
+  color: var(--cor-p1); /* Cor roxa para o texto */
+}
+
+.ativo .icon {
+  fill: var(--cor-p1); /* Cor roxa para o ícone SVG */
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -32,7 +40,7 @@
   flex-wrap: wrap;
 }
 
-.header-menu-first li a{
+.header-menu-first li a {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -45,18 +53,37 @@
 }
 
 .header-menu-first li:hover .icon {
-  fill: var(--cor-p1); /* Mudando a cor do ícone quando o mouse passar sobre o li */
+  fill: var(
+    --cor-p1
+  ); /* Mudando a cor do ícone quando o mouse passar sobre o li */
 }
 
-.header-botoes{
+.header-botoes {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .header-menu-first nav{
+.header-menu-second{
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header-menu-second{
+    display: block;
+    display: flex;
+    padding: 12px 0px;
+    justify-content: center;
+  }
+  
+  .header-menu-second ul{
+    display: flex;
+    gap: 32px;
+  }
+
+
+  .header-menu-first nav {
     display: none;
   }
 
@@ -64,7 +91,7 @@
     padding: 8px 0px;
   }
 
-  .header-menu-first img{
+  .header-menu-first img {
     width: 120px;
   }
 

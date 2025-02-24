@@ -26,6 +26,14 @@
   background: var(--cor-11);
 }
 
+.botao:hover {
+  background: linear-gradient(#47a6ff, #a257ff);
+}
+
+.botao.secundario:hover {
+  background: var(--cor-9);
+}
+
 .botao.seta {
   display: flex;
   align-items: center;
@@ -47,8 +55,8 @@
 
 @media (max-width: 768px) {
   .botao {
-    padding: 8px 8px;
-    font-size: 0.8rem;
+    padding: 6px 6px;
+    font-size: 0.7rem;
   }
 }
 
@@ -72,35 +80,8 @@
   color: var(--cor-0);
 }
 
-/* titulos internos */
-.titulo-bg {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--cor-11);
-}
-
-.titulo {
-  background: url("../../Img/dec/top-right.svg") no-repeat top right 20px;
-}
-
-.titulo p {
-  margin-bottom: 4px;
-}
-
 @media (max-width: 768px) {
   .container {
     padding: 40px 20px 0px 20px;
-  }
-  
-
-  .titulo-bg {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .titulo p {
-    font-size: 1rem;
-    text-transform: lowercase;
-    font-weight: 400;
   }
 }
