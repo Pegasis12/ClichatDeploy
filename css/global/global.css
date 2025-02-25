@@ -49,10 +49,9 @@ Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"], video{
   body {
     padding-top: 130px;
     display: grid;
-    grid-template-columns: 1fr; /* Ajustei o número de colunas para 2 */
+    grid-template-columns: 80px 1fr; /* Ajustei o número de colunas para 2 */
     grid-template-areas:
-      "header"
-      "content";
+    "header header"
+    "aside content";
   }
-  
 }

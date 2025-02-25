@@ -52,6 +52,15 @@
 
 @media (max-width: 900px) {
   .aside {
+    width: 80px;
+    top: 124px;
+    left: 0;
+    z-index: 10;
+    padding: 30px 12px;
+    align-items: center;
+  }
+
+  .aside li span{
     display: none;
   }
 }
