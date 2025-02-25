@@ -78,7 +78,7 @@
 .header-logo{
   display: flex; 
   align-items: center;
-  gap: 3px;
+  gap: 7px;
 }
 
 .menu-h{
@@ -119,15 +119,11 @@
     display: none;
   }
 
-  .header {
-    padding: 8px 0px;
-  }
-
   .header-menu-first .logo img{
     width: 120px;
   }
 
   .header {
-    padding: 12px 20px;
+    padding: 12px 12px;
   }
 }
