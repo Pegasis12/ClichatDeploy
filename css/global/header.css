@@ -93,6 +93,8 @@
     padding: 12px 0px;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid var(--cor-9);
+    background: var(--cor-11);
   }
   
   .header-menu-second ul{

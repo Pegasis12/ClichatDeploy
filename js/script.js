@@ -56,24 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //menu h
-document.getElementById("menu-toggle").addEventListener("click", function(event) {
-  event.preventDefault(); // Evita o comportamento padrão da âncora (navegar para outro lugar)
-  
-  // Verifica se a classe 'active' está presente
-  const menu = document.querySelector(".aside-mobile");
-  menu.classList.toggle("active"); // Alterna a classe 'active'
-});
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu-toggle');
+  const asideMobile = document.querySelector('.aside-mobile');
+  const transparente = document.querySelector('.transparente');
 
-document.addEventListener("click", function(event) {
-  const menu = document.querySelector(".aside-mobile");
-  const menuToggle = document.getElementById("menu-toggle");
+  menuToggle.addEventListener('click', function() {
+      asideMobile.classList.toggle('active'); 
+      transparente.classList.toggle('active'); 
+  });
 
-  // Verifica se o clique foi fora do menu ou do botão de menu
-  if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-    if (menu.classList.contains("active")) {
-      menu.classList.remove("active"); // Fecha o menu
-    }
-  }
+  // Se clicar no fundo transparente, fechar o menu
+  transparente.addEventListener('click', function() {
+      asideMobile.classList.remove('active');
+      transparente.classList.remove('active');
+  });
 });
 
 
