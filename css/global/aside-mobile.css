@@ -19,7 +19,7 @@
   height: 100vh;
   background: rgb(23, 23, 23);
   border-right: solid 2px var(--cor-9);
-  transition: right 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
   z-index: 5;
   box-sizing: border-box;
   display: flex;
