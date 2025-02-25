@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//menu h
+//menu-h
 document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.getElementById('menu-toggle');
   const asideMobile = document.querySelector('.aside-mobile');
