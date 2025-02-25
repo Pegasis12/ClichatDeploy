@@ -10,6 +10,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  padding: 20px;
 }
 
 .conversas-card {
