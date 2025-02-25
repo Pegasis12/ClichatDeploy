@@ -33,14 +33,14 @@ a {
   color: inherit;
 }
 
-Img {
+Img, video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /* atribui ao final de um arquivo jpg a borda de 4px*/
-Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"]{
+Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"], video{
   border-radius: 10px;
 }
 
