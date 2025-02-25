@@ -8,9 +8,8 @@
   margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .intro {
     padding: 20px;
   }
-
 }
