@@ -1,0 +1,53 @@
+.aside-mobile {
+  display: none; /* O menu móvel começa oculto */
+  /* ... outras regras de estilo */
+}
+
+.aside-mobile.active {
+  display: block; /* O menu é mostrado quando a classe 'active' é adicionada */
+}
+
+/* Esconde o menu mobile por padrão */
+.aside-mobile {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Fora da tela */
+  padding-top: 150px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 260px;
+  height: 100vh;
+  background: rgb(23, 23, 23);
+  border-right: solid 2px var(--cor-9);
+  transition: right 0.3s ease-in-out;
+  z-index: 5;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Exibe o menu quando ativado */
+.aside-mobile.active {
+  left: 0;
+}
+
+
+/* estilo */
+.aside-mobile li{
+  border: solid 2px var(--cor-9);
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+.aside-mobile li:hover {
+  background: rgba(255, 255, 255, 0.199);
+}
+
+.aside-mobile li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

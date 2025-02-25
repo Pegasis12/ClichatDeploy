@@ -3,6 +3,7 @@
 @import "./css/global/header.css";
 @import "./css/global/footer.css";
 @import "./css/global/aside.css";
+@import "./css/global/aside-mobile.css";
 
 /* utilidades */
 @import "./css/utilidades/componentes.css";

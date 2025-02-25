@@ -75,6 +75,17 @@
   gap: 4px;
 }
 
+.header-logo{
+  display: flex; 
+  align-items: center;
+  gap: 3px;
+}
+
+.menu-h{
+  display: none;
+}
+
+
 @media (max-width: 900px) {
   .header-menu-second{
     display: block;
@@ -90,6 +101,17 @@
     gap: 32px;
   }
 
+  .menu-h{
+    display: block;
+  }
+
+  .header{
+    gap: 3px;
+  }
+
+  .header-botoes {
+    gap: 8px;
+  }
 
   .header-menu-first nav {
     display: none;
@@ -99,7 +121,7 @@
     padding: 8px 0px;
   }
 
-  .header-menu-first img {
+  .header-menu-first .logo img{
     width: 120px;
   }
 
