@@ -52,11 +52,11 @@
 
 @media (max-width: 900px) {
   .aside {
-    width: 80px;
+    width: 70px;
     top: 124px;
     left: 0;
     z-index: 10;
-    padding: 30px 12px;
+    padding: 28px 20px;
     align-items: center;
   }
 
