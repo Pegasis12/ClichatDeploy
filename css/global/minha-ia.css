@@ -1,0 +1,17 @@
+.intro.warning {
+  padding-top: 300px;
+}
+
+.warning {
+  display: flex;
+  justify-content: center;
+}
+
+.warning img {
+  justify-self: center;
+}
+
+.warning-texto h1 {
+  text-align: center;
+  max-width: 40ch;
+}
