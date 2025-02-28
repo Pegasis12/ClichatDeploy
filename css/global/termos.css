@@ -1,0 +1,20 @@
+.termos ul {
+  padding-left: 20px;
+}
+
+.termos li {
+  list-style: circle;
+}
+
+.titulo-termos h2, .termos h2{
+  text-transform: uppercase;
+}
+
+.titulo-termos p, .termos p, .titulo-termos h1, .termos h2{
+  margin-bottom: 12px;
+}
+
+.termos {
+  margin-top: 40px;
+}
+
