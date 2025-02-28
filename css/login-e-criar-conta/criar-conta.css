@@ -1,0 +1,117 @@
+body.login{
+  padding-top: 0px;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  grid-template-areas: none;
+  box-sizing: border-box;
+}
+
+.login-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cor-9);
+  border-radius: 10px;
+  place-self: center;
+}
+
+.login-content Img[src$=".jpg"]{
+  border-radius: 10px 0px 0px 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login-form{
+  padding: 32px;
+}
+
+.login-content img, .login-google p{
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.login-content h2{
+  margin-bottom: 8px;
+}
+
+.login-titulo p{
+  margin-bottom: 32px;
+}
+
+/* form */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form label {
+  display: block;
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+  margin-bottom: 4px;
+}
+
+.form .col-2 {
+  grid-column: span 2;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form textarea {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  background: var(--cor-1);
+  border: 1px solid var(--cor-2);
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--cor-p1);
+  background: var(--cor-0);
+  box-shadow: 0 0 0 1px #B480F4;
+}
+
+.login-content button{
+  padding: 12px;
+  border-radius: 5px;
+  background: linear-gradient(#70B8FD, #B480F4);
+  font: 600 1rem/1.35 "Poppins", sans-serif;
+  color: var(--cor-0);
+  border: solid 2px #70B8FD;
+}
+
+
+.login-google button{
+  width: 100%;
+  background: var(--cor-0);
+  color: var(--cor-11);
+  border-color: var(--cor-0);
+}
+
+
+@media (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form .col-2 {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 900px){
+  .login-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--cor-9);
+    border-radius: 10px;
+    place-self: center;
+  }
+}
