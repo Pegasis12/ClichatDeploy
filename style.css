@@ -4,7 +4,6 @@
 @import "./css/global/footer.css";
 @import "./css/global/aside.css";
 @import "./css/global/aside-mobile.css";
-@import "./css/global/minha-ia.css";
 
 /* utilidades */
 @import "./css/utilidades/componentes.css";
@@ -15,3 +14,6 @@
 @import "./css/home/intro.css";
 @import "./css/home/conversas-card.css";
 @import "./css/home/perguntas.css";
+
+/* minha ia */
+@import "./css/minha-ia/minha-ia.css";
