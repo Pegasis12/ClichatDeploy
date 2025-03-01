@@ -70,7 +70,16 @@
   opacity: 0.5;
 }
 
-.conversas-card{
+.video-container:has(.poster.premium) {
+  border: 3px solid transparent; /* Borda roxa, ou a cor de sua escolha */
+  border-radius: 12px;
+  transition: border-color 1.5s ease-in-out; /* Transição suave */
+  animation: bordaRGB 6s linear infinite;
+}
+
+
+
+.video-container{
   position: relative;
 }
 
