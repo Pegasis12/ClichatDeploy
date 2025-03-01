@@ -19,7 +19,7 @@
   background: rgb(23, 23, 23);
   border-right: solid 2px var(--cor-9);
   transition: left 0.3s ease-in-out;
-  z-index: 5;
+  z-index: 6;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@
   height: 100%;
   background: transparent;
   backdrop-filter: blur(5px); 
-  z-index: 5;
+  z-index: 6;
   transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0; /* Começa invisível */
 }
