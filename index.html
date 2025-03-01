@@ -231,21 +231,41 @@
           <span class="dot active" onclick="currentSlide(0, 'banner1')"></span>
           <span class="dot" onclick="currentSlide(1, 'banner1')"></span>
         </div>
-      </section>   
-      
+      </section>
+
       <section class="conversas" aria-label="conversas" id="conversas">
         <h1 class="font-1-xl cor-0">Escolha alguém para <span class="cor-p1">conversar!</span></h1>
         <div class="conversas-content">
           <div class="conversas-card">
             <div class="preco-clicoin">
-              <img src=".//img/icones/clicoin.svg" alt="clicoin"  width="24px" height="24">
+              <img src=".//img/icones/clicoin.svg" alt="clicoin" width="24px" height="24">
               <span class="font-2-s cor-0">200</span>
             </div>
             <div class="video-container">
               <a href="#">
                 <img class="poster premium" src="./img/fotos/julia.jpeg" alt="julia" width="832" height="1152">
                 <video class="video" src="./img/vídeos/julia.mp4" poster="./img/fotos/julia.jpeg" loop muted></video>
-                <span class="premium-button font-2-xs cor-0">Liberar Conteúdo</span>
+                <a href="javascript:void(0)" class="openModal">
+                  <span class="premium-button font-2-xs cor-0">Liberar Conteúdo</span>
+                </a>
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <div class="modal-preco">
+                      <img src="./img/icones/clicoin.svg" alt="CliCoins" width="24" height="24">
+                      <p class="font-1-l cor-0">200</p>
+                    </div>
+
+                    <div class="modal-confirmar">
+                      <p class="font-1-m-b cor-0">Você confirma a compra?</p>
+                      <div class="botoes-modal">
+                        <a class="confirmar" href="">Confirmar</a>
+                        <a class="cancelar" href="">Cancelar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </a>
             </div>
             <div class="conversas-info">
@@ -282,14 +302,34 @@
 
           <div class="conversas-card">
             <div class="preco-clicoin">
-              <img src=".//img/icones/clicoin.svg" alt="clicoin"  width="24px" height="24">
+              <img src=".//img/icones/clicoin.svg" alt="clicoin" width="24px" height="24">
               <span class="font-2-s cor-0">200</span>
             </div>
             <div class="video-container">
               <a href="#">
                 <img class="poster premium" src="./img/fotos/juliana.png" alt="Juliana" width="832" height="1152">
                 <video class="video" src="./img/vídeos/juliana.mp4" poster="./img/fotos/juliana.png" loop muted></video>
-                <span class="premium-button font-2-xs cor-0">Liberar Conteúdo</span>
+                <a href="javascript:void(0)" class="openModal">
+                  <span class="premium-button font-2-xs cor-0">Liberar Conteúdo</span>
+                </a>
+                <!-- Modal -->
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+                    <div class="modal-preco">
+                      <img src="./img/icones/clicoin.svg" alt="CliCoins" width="24" height="24">
+                      <p class="font-1-l cor-0">200</p>
+                    </div>
+
+                    <div class="modal-confirmar">
+                      <p class="font-1-m-b cor-0">Você confirma a compra?</p>
+                      <div class="botoes-modal">
+                        <a class="confirmar" href="">Confirmar</a>
+                        <a class="cancelar" href="">Cancelar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </a>
             </div>
             <div class="conversas-info">

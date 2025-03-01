@@ -111,8 +111,6 @@ function currentSlide(index, bannerId) {
 changeBanner('banner1');
 changeBanner('banner2');
 
-
-// troca imagem
 // Função para trocar as imagens quando a tela for menor que 900px
 function updateBannerImages() {
   const banners = document.querySelectorAll('.banner');
@@ -139,6 +137,31 @@ updateBannerImages();
 // Atualiza as imagens sempre que o tamanho da janela mudar
 window.addEventListener('resize', updateBannerImages);
 
+
+
+// Seleciona todos os botões que devem abrir o modal
+const openModalBtns = document.querySelectorAll('.openModal');
+const modal = document.getElementById('modal');
+const closeModalBtn = document.getElementById('closeModal');
+
+// Mostra o modal ao clicar em qualquer botão
+openModalBtns.forEach(btn => {
+  btn.onclick = function() {
+    modal.style.display = 'flex';
+  };
+});
+
+// Fecha o modal ao clicar no botão de fechar
+closeModalBtn.onclick = function() {
+  modal.style.display = 'none';
+};
+
+// Fecha o modal se clicar fora da caixa de conteúdo
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};
 
 
 
