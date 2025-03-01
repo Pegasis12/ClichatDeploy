@@ -14,7 +14,6 @@ links2.forEach(ativarLink);
 
 //perguntas frequentes
 const perguntas = document.querySelectorAll(".perguntas button");
-
 function ativarPergunta(event) {
   const pergunta = event.currentTarget;
   const controls = pergunta.getAttribute("aria-controls");
@@ -24,30 +23,24 @@ function ativarPergunta(event) {
   const ativa = resposta.classList.contains("ativa");
   pergunta.setAttribute("aria-expanded", ativa);
 }
-
 function EventosPergunta(pergunta) {
   pergunta.addEventListener("click", ativarPergunta);
 }
-
 perguntas.forEach(EventosPergunta);
 
 //vídeo loop
 document.addEventListener("DOMContentLoaded", function () {
   const containers = document.querySelectorAll(".video-container");
-
-  containers.forEach(container => {
+  containers.forEach((container) => {
     const video = container.querySelector("video");
     const poster = container.querySelector(".poster");
-
     // Verifica se o poster contém a classe 'premium'
-    const isPremium = poster.classList.contains('premium');
-
+    const isPremium = poster.classList.contains("premium");
     container.addEventListener("mouseover", function () {
       poster.style.opacity = isPremium ? 0.5 : 0; // Opacidade 0.5 se for 'premium', 0 caso contrário
       video.style.opacity = 1; // Aparece o vídeo
       video.play();
     });
-
     container.addEventListener("mouseleave", function () {
       video.pause();
       video.currentTime = 0; // Reseta o vídeo
@@ -57,115 +50,103 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//MENU-H
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const asideMobile = document.querySelector(".aside-mobile");
+  const transparente = document.querySelector(".transparente");
 
-//menu-h
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const asideMobile = document.querySelector('.aside-mobile');
-  const transparente = document.querySelector('.transparente');
-
-  menuToggle.addEventListener('click', function() {
-      asideMobile.classList.toggle('active'); 
-      transparente.classList.toggle('active'); 
+  menuToggle.addEventListener("click", function () {
+    asideMobile.classList.toggle("active");
+    transparente.classList.toggle("active");
   });
-
   // Se clicar no fundo transparente, fechar o menu
-  transparente.addEventListener('click', function() {
-      asideMobile.classList.remove('active');
-      transparente.classList.remove('active');
+  transparente.addEventListener("click", function () {
+    asideMobile.classList.remove("active");
+    transparente.classList.remove("active");
   });
 });
 
 // banner
 function changeBanner(bannerId) {
   const banner = document.getElementById(bannerId);
-  const images = banner.querySelectorAll('.banner-img');
-  const dots = banner.querySelectorAll('.dot');
+  const images = banner.querySelectorAll(".banner-img");
+  const dots = banner.querySelectorAll(".dot");
   let currentIndex = 0;
 
-  setInterval(function() {
-    images[currentIndex].classList.remove('active');
-    dots[currentIndex].classList.remove('active');
+  setInterval(function () {
+    images[currentIndex].classList.remove("active");
+    dots[currentIndex].classList.remove("active");
     currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add('active');
-    dots[currentIndex].classList.add('active');
+    images[currentIndex].classList.add("active");
+    dots[currentIndex].classList.add("active");
   }, 5000);
 }
-
 function currentSlide(index, bannerId) {
   const banner = document.getElementById(bannerId);
-  const images = banner.querySelectorAll('.banner-img');
-  const dots = banner.querySelectorAll('.dot');
-  
-  let currentIndex = Array.from(dots).findIndex(dot => dot.classList.contains('active'));
+  const images = banner.querySelectorAll(".banner-img");
+  const dots = banner.querySelectorAll(".dot");
 
-  images[currentIndex].classList.remove('active');
-  dots[currentIndex].classList.remove('active');
-  
+  let currentIndex = Array.from(dots).findIndex((dot) =>
+    dot.classList.contains("active")
+  );
+
+  images[currentIndex].classList.remove("active");
+  dots[currentIndex].classList.remove("active");
+
   currentIndex = index;
-  images[currentIndex].classList.add('active');
-  dots[currentIndex].classList.add('active');
+  images[currentIndex].classList.add("active");
+  dots[currentIndex].classList.add("active");
 }
-
 // Iniciar a troca automática para cada banner
-changeBanner('banner1');
-changeBanner('banner2');
+changeBanner("banner1");
+changeBanner("banner2");
 
 // Função para trocar as imagens quando a tela for menor que 900px
 function updateBannerImages() {
-  const banners = document.querySelectorAll('.banner');
+  const banners = document.querySelectorAll(".banner");
 
-  banners.forEach(banner => {
-    const images = banner.querySelectorAll('.banner-img');
+  banners.forEach((banner) => {
+    const images = banner.querySelectorAll(".banner-img");
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 900) {
       // Troca as imagens para a versão mobile
-      images[0].src = './img/fotos/banner-promo-mobile.png';
-      images[1].src = './img/fotos/banner-promo2-mobile.png';
+      images[0].src = "./img/fotos/banner-promo-mobile.png";
+      images[1].src = "./img/fotos/banner-promo2-mobile.png";
     } else {
       // Troca para as imagens padrão quando a tela for maior que 900px
-      images[0].src = './img/fotos/banner-promo.png';
-      images[1].src = './img/fotos/banner-promo2.png';
+      images[0].src = "./img/fotos/banner-promo.png";
+      images[1].src = "./img/fotos/banner-promo2.png";
     }
   });
 }
-
 // Inicializa as trocas de imagens no carregamento da página
 updateBannerImages();
-
 // Atualiza as imagens sempre que o tamanho da janela mudar
-window.addEventListener('resize', updateBannerImages);
+window.addEventListener("resize", updateBannerImages);
 
-
-
+// MODAL
 // Seleciona todos os botões que devem abrir o modal
-const openModalBtns = document.querySelectorAll('.openModal');
-const modal = document.getElementById('modal');
-const closeModalBtn = document.getElementById('closeModal');
+const openModalBtns = document.querySelectorAll(".openModal");
+const modal = document.getElementById("modal");
+const closeModalBtn = document.getElementById("closeModal");
 
 // Mostra o modal ao clicar em qualquer botão
-openModalBtns.forEach(btn => {
-  btn.onclick = function() {
-    modal.style.display = 'flex';
+openModalBtns.forEach((btn) => {
+  btn.onclick = function () {
+    modal.style.display = "flex";
   };
 });
 
 // Fecha o modal ao clicar no botão de fechar
-closeModalBtn.onclick = function() {
-  modal.style.display = 'none';
+closeModalBtn.onclick = function () {
+  modal.style.display = "none";
 };
 
 // Fecha o modal se clicar fora da caixa de conteúdo
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target === modal) {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   }
 };
-
-
-
-
-
-
-
