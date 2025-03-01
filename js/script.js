@@ -39,8 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const video = container.querySelector("video");
     const poster = container.querySelector(".poster");
 
+    // Verifica se o poster contém a classe 'premium'
+    const isPremium = poster.classList.contains('premium');
+
     container.addEventListener("mouseover", function () {
-      poster.style.opacity = 0; // Some com o poster suavemente
+      poster.style.opacity = isPremium ? 0.5 : 0; // Opacidade 0.5 se for 'premium', 0 caso contrário
       video.style.opacity = 1; // Aparece o vídeo
       video.play();
     });
@@ -49,10 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
       video.pause();
       video.currentTime = 0; // Reseta o vídeo
       video.style.opacity = 0; // Some com o vídeo
-      poster.style.opacity = 1; // Traz o poster de volta
+      poster.style.opacity = isPremium ? 0.5 : 1; // Traz o poster de volta com opacidade 0.5 ou 1
     });
   });
 });
+
 
 //menu-h
 document.addEventListener('DOMContentLoaded', function() {

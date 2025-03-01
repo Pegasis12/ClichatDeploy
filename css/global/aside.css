@@ -50,6 +50,38 @@
   ); /* Mudando a cor do ícone quando o mouse passar sobre o li */
 }
 
+.animate-border {
+  border: 2px solid transparent; /* Bordas começam transparentes */
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: border-color 1.5s ease-in-out; /* Transição suave */
+  cursor: pointer;
+  animation: bordaRGB 6s linear infinite;
+}
+
+@keyframes bordaRGB {
+  0% {
+    border-color: #a760ff; /* Roxo mais suave */
+  }
+  25% {
+    border-color: #9a5ce7; /* Roxo claro e suave */
+  }
+  50% {
+    border-color: #8651d3; /* Roxo médio, mais suave que o anterior */
+  }
+  75% {
+    border-color: #7346c0; /* Roxo com um tom mais profundo, mas sem ser escuro */
+  }
+  100% {
+    border-color: #a760ff; /* Retorna ao roxo inicial */
+  }
+}
+
+
+
+
+
 @media (max-width: 900px) {
   .aside {
     display: none;
