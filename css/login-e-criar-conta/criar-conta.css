@@ -1,4 +1,4 @@
-body.login{
+body.login {
   padding-top: 0px;
   grid-template-columns: 1fr;
   height: 100vh;
@@ -6,7 +6,7 @@ body.login{
   box-sizing: border-box;
 }
 
-.login-content{
+.login-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: var(--cor-9);
@@ -15,46 +15,46 @@ body.login{
   align-items: center;
 }
 
-.login-imagem Img[src$=".jpg"]{
+.login-imagem Img[src$=".jpg"] {
   border-radius: 10px 0px 0px 10px;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-.login-form{
+.login-form {
   padding: 32px;
 }
 
-.login-logo{
+.login-logo {
   margin-bottom: 16px;
 }
 
-.login-google p{
+.login-google p {
   margin-bottom: 16px;
   text-align: center;
 }
 
-.login-content h1{
+.login-content h1 {
   margin-bottom: 16px;
 }
 
-.login-titulo p{
+.login-titulo p {
   margin-bottom: 40px;
 }
 
-.login-titulo a{
-  color: #2E82F6;
+.login-titulo a {
+  color: #2e82f6;
   text-decoration: underline;
 }
 
 .enviar {
   padding: 16px;
   border-radius: 5px;
-  background: linear-gradient(#70B8FD, #B480F4);
+  background: linear-gradient(#70b8fd, #b480f4);
   font: 600 1rem/1.35 "Poppins", sans-serif;
   color: var(--cor-0);
-  border: solid 2px #70B8FD;
+  border: solid 2px #70b8fd;
   cursor: pointer;
 }
 
@@ -64,9 +64,9 @@ body.login{
 
 .button-google {
   display: flex;
-  align-items: center;  /* Centraliza verticalmente */
+  align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
-  gap: 8px;  /* Espaço entre o ícone e o texto */
+  gap: 8px; /* Espaço entre o ícone e o texto */
   padding: 16px;
   background: var(--cor-0);
   color: var(--cor-11);
@@ -76,7 +76,7 @@ body.login{
   cursor: pointer;
 }
 
-.form p{
+.form p {
   text-align: center;
 }
 
@@ -117,10 +117,10 @@ body.login{
   outline: none;
   border-color: var(--cor-p1);
   background: var(--cor-0);
-  box-shadow: 0 0 0 1px #B480F4;
+  box-shadow: 0 0 0 1px #b480f4;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .form {
     grid-template-columns: 1fr;
   }
@@ -129,18 +129,34 @@ body.login{
     grid-column: 1;
   }
 
-  .login-content{
+  .login-content {
     place-self: initial;
   }
-}
 
-@media (max-width: 900px){
-  .login-content{
+  .login-content {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .login-imagem{
+  .login-imagem {
     display: none;
+  }
+
+  .enviar {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+
+  .button-google {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+
+  .form input[type="text"],
+  .form input[type="email"],
+  .form input[type="password"],
+  .form textarea {
+    font-size: 0.8rem;
+    padding: 8px;
   }
 }
