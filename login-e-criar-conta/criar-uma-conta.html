@@ -19,16 +19,13 @@
 <body class="login">
   <main class="login-content">
     <div class="login-imagem">
-      <img src="../img/login-imagem.jpg" alt="login" width="429" height="643">
+      <img src="../img/fotos/crie-uma-conta.jpg" alt="login" width="429" height="643">
     </div>
 
     <section class="login-form" aria-label="Formulário">
       <div class="login-titulo">
-        <div class="login-logo">
-          <img src="../img/logo-icon.png" alt="logo" width="60" height="60">
-        </div>
-        <h2 class="font-1-l cor-0">Crie uma conta <span class="cor-p1">gratis</span>!</h2>
-        <p class="font-2-xs cor-3">Preencha os dados e comesse a usar agora mesmo!</p>
+        <h1 class="font-1-xl cor-0">Criar uma conta</h1>
+        <p class="font-2-xs cor-3">Já tem uma conta? <a href="./login.html">Ir para login</a></p>
       </div>
 
       <form class="form">
@@ -47,14 +44,17 @@
 
         <div class="col-2">
           <label for="password">Senha</label>
-          <input type="password" id="password" name="password" placeholder="••••••••" required>
+          <input type="password" id="password" name="password" placeholder="Digite uma senha" required>
         </div>
-        <button class="col-2">Enviar Mensagem</button>
+        <button class="enviar col-2">Criar conta</button>
 
-        <div class="login-google col-2">
-          <p>Ou faça login com</p>
-          <button class="button-google">Faça Login com Google</button>
-        </div>
+        <p class="font-2-xs cor-0 col-2">Ou entrar com</p>
+
+        <button class="button-google col-2">
+          <img src="../img/icones/google.svg" class="icon-google" width="24" height="24">
+          <span>Google</span>
+        </button>        
+        
       </form>
     </section>
   </main>

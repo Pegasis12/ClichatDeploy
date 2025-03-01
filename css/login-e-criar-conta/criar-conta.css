@@ -12,9 +12,10 @@ body.login{
   background: var(--cor-9);
   border-radius: 10px;
   place-self: center;
+  align-items: center;
 }
 
-.login-content Img[src$=".jpg"]{
+.login-imagem Img[src$=".jpg"]{
   border-radius: 10px 0px 0px 10px;
   object-fit: cover;
   width: 100%;
@@ -25,17 +26,58 @@ body.login{
   padding: 32px;
 }
 
-.login-content img, .login-google p{
+.login-logo{
+  margin-bottom: 16px;
+}
+
+.login-google p{
   margin-bottom: 16px;
   text-align: center;
 }
 
-.login-content h2{
-  margin-bottom: 8px;
+.login-content h1{
+  margin-bottom: 16px;
 }
 
 .login-titulo p{
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+}
+
+.login-titulo a{
+  color: #2E82F6;
+  text-decoration: underline;
+}
+
+.enviar {
+  padding: 16px;
+  border-radius: 5px;
+  background: linear-gradient(#70B8FD, #B480F4);
+  font: 600 1rem/1.35 "Poppins", sans-serif;
+  color: var(--cor-0);
+  border: solid 2px #70B8FD;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: linear-gradient(#47a6ff, #a257ff);
+}
+
+.button-google {
+  display: flex;
+  align-items: center;  /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 8px;  /* Espaço entre o ícone e o texto */
+  padding: 16px;
+  background: var(--cor-0);
+  color: var(--cor-11);
+  border: none;
+  border-radius: 5px;
+  font: 600 1rem/1.35 "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.form p{
+  text-align: center;
 }
 
 /* form */
@@ -78,24 +120,6 @@ body.login{
   box-shadow: 0 0 0 1px #B480F4;
 }
 
-.login-content button{
-  padding: 12px;
-  border-radius: 5px;
-  background: linear-gradient(#70B8FD, #B480F4);
-  font: 600 1rem/1.35 "Poppins", sans-serif;
-  color: var(--cor-0);
-  border: solid 2px #70B8FD;
-}
-
-
-.login-google button{
-  width: 100%;
-  background: var(--cor-0);
-  color: var(--cor-11);
-  border-color: var(--cor-0);
-}
-
-
 @media (max-width: 600px) {
   .form {
     grid-template-columns: 1fr;
@@ -104,14 +128,19 @@ body.login{
   .form .col-2 {
     grid-column: 1;
   }
+
+  .login-content{
+    place-self: initial;
+  }
 }
 
 @media (max-width: 900px){
   .login-content{
     display: grid;
     grid-template-columns: 1fr;
-    background: var(--cor-9);
-    border-radius: 10px;
-    place-self: center;
+  }
+
+  .login-imagem{
+    display: none;
   }
 }
