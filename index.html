@@ -224,10 +224,15 @@
 
   <div class="intro container">
     <main>
-      <section class="banner" aria-label="banner">
-        <img src="./img/fotos/banner-promo.png" alt="banner" width="1920" height="390">
-      </section>
-
+      <section class="banner" id="banner1" aria-label="banner">
+        <img src="./img/fotos/banner-promo.png" alt="banner 1" class="banner-img active" width="1920" height="390">
+        <img src="./img/fotos/banner-promo2.png" alt="banner 2" class="banner-img" width="1920" height="390">
+        <div class="pagination">
+          <span class="dot active" onclick="currentSlide(0, 'banner1')"></span>
+          <span class="dot" onclick="currentSlide(1, 'banner1')"></span>
+        </div>
+      </section>   
+      
       <section class="conversas" aria-label="conversas" id="conversas">
         <h1 class="font-1-xl cor-0">Escolha alguém para <span class="cor-p1">conversar!</span></h1>
         <div class="conversas-content">
@@ -347,8 +352,13 @@
         </div>
       </section>
 
-      <section class="banner" aria-label="banner">
-        <img src="./img/fotos/banner-promo.png" alt="banner" width="1920" height="390">
+      <section class="banner" id="banner2" aria-label="banner">
+        <img src="./img/fotos/banner-promo.png" alt="banner 1" class="banner-img active" width="1920" height="390">
+        <img src="./img/fotos/banner-promo2.png" alt="banner 2" class="banner-img" width="1920" height="390">
+        <div class="pagination">
+          <span class="dot active" onclick="currentSlide(0, 'banner2')"></span>
+          <span class="dot" onclick="currentSlide(1, 'banner2')"></span>
+        </div>
       </section>
 
       <section class="perguntas" id="perguntas" aria-label="perguntas">

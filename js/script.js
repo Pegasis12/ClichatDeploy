@@ -76,6 +76,72 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// banner
+function changeBanner(bannerId) {
+  const banner = document.getElementById(bannerId);
+  const images = banner.querySelectorAll('.banner-img');
+  const dots = banner.querySelectorAll('.dot');
+  let currentIndex = 0;
+
+  setInterval(function() {
+    images[currentIndex].classList.remove('active');
+    dots[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('active');
+  }, 5000);
+}
+
+function currentSlide(index, bannerId) {
+  const banner = document.getElementById(bannerId);
+  const images = banner.querySelectorAll('.banner-img');
+  const dots = banner.querySelectorAll('.dot');
+  
+  let currentIndex = Array.from(dots).findIndex(dot => dot.classList.contains('active'));
+
+  images[currentIndex].classList.remove('active');
+  dots[currentIndex].classList.remove('active');
+  
+  currentIndex = index;
+  images[currentIndex].classList.add('active');
+  dots[currentIndex].classList.add('active');
+}
+
+// Iniciar a troca automática para cada banner
+changeBanner('banner1');
+changeBanner('banner2');
+
+
+// troca imagem
+// Função para trocar as imagens quando a tela for menor que 900px
+function updateBannerImages() {
+  const banners = document.querySelectorAll('.banner');
+
+  banners.forEach(banner => {
+    const images = banner.querySelectorAll('.banner-img');
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 900) {
+      // Troca as imagens para a versão mobile
+      images[0].src = './img/fotos/banner-promo-mobile.png';
+      images[1].src = './img/fotos/banner-promo2-mobile.png';
+    } else {
+      // Troca para as imagens padrão quando a tela for maior que 900px
+      images[0].src = './img/fotos/banner-promo.png';
+      images[1].src = './img/fotos/banner-promo2.png';
+    }
+  });
+}
+
+// Inicializa as trocas de imagens no carregamento da página
+updateBannerImages();
+
+// Atualiza as imagens sempre que o tamanho da janela mudar
+window.addEventListener('resize', updateBannerImages);
+
+
+
+
 
 
 
