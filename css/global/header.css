@@ -85,6 +85,11 @@
   display: none;
 }
 
+.header-clicoin{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
 @media (max-width: 900px) {
   .header-menu-second{
