@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  z-index: 16;
+  z-index: 5;
 }
 
 .video-container{
