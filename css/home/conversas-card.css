@@ -4,6 +4,7 @@
 
 .conversas h1 {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .conversas-content {
@@ -138,6 +139,20 @@
 @media (max-width: 900px) {
   .modal-content {
     min-width: 200px;
+  }
+
+  .conversas-info {
+    bottom: 12px;
+    left: 0px;
+  }
+
+  .conversas-info {
+    padding: 0px 20px;
+  }
+
+  .preco-clicoin{
+    left: 12px;
+    margin-top: 12px;
   }
 }
 
