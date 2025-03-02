@@ -130,14 +130,16 @@ body.login {
   }
 
   .login-content {
-    place-self: initial;
-  }
-
-  .login-content {
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 0px;
     height: 100vh;
+    place-self: initial;
+    align-items: start;
+  }
+
+  .login-form{
+    padding: 20px;
   }
 
   .login-imagem {
