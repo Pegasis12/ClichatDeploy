@@ -130,10 +130,8 @@ body.login {
   }
 
   .login-content {
-    display: grid;
     grid-template-columns: 1fr;
     border-radius: 0px;
-    height: 100vh;
     place-self: initial;
     align-items: start;
   }
