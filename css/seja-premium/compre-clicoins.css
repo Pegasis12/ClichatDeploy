@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 1250px) {
-  .clicoins-item h3 {
-    margin-bottom: 4px;
-  }
-
   .order-1{
     order: 1;
   } 
@@ -54,5 +50,10 @@
   .clicoins {
     grid-template-columns: 1fr;
     padding: 32px 0px;
+  }
+
+  .planos-vantagens .botao{
+    font-size: 1rem;
+    border-radius: 5px;
   }
 }
