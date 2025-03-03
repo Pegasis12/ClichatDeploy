@@ -25,4 +25,5 @@
 @import "./css/login/login.css";
 
 /* seja premium */
-@import "./css/seja-premium/seja-premium.css";
+@import "./css/seja-premium/planos.css";
+@import "./css/seja-premium/compre-clicoins.css";

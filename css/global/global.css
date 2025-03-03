@@ -52,6 +52,7 @@ Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"], video{
     grid-template-columns:1fr; /* Ajustei o número de colunas para 2 */
     grid-template-areas:
     "header"
-    "aside";
+    "aside"
+    "content";
   }
 }

@@ -68,39 +68,42 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // banner
-function changeBanner(bannerId) {
-  const banner = document.getElementById(bannerId);
-  const images = banner.querySelectorAll(".banner-img");
-  const dots = banner.querySelectorAll(".dot");
-  let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  function changeBanner(bannerId) {
+    const banner = document.getElementById(bannerId);
 
-  setInterval(function () {
-    images[currentIndex].classList.remove("active");
-    dots[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.add("active");
-    dots[currentIndex].classList.add("active");
-  }, 5000);
-}
-function currentSlide(index, bannerId) {
-  const banner = document.getElementById(bannerId);
-  const images = banner.querySelectorAll(".banner-img");
-  const dots = banner.querySelectorAll(".dot");
+    if (!banner) {
+      console.warn(
+        `Aviso: Elemento com ID "${bannerId}" não encontrado. Verifique o HTML.`
+      );
+      return;
+    }
 
-  let currentIndex = Array.from(dots).findIndex((dot) =>
-    dot.classList.contains("active")
-  );
+    const images = banner.querySelectorAll(".banner-img");
+    const dots = banner.querySelectorAll(".dot");
 
-  images[currentIndex].classList.remove("active");
-  dots[currentIndex].classList.remove("active");
+    if (images.length === 0 || dots.length === 0) {
+      console.warn(
+        `Aviso: Nenhuma imagem ou dot encontrado no banner "${bannerId}".`
+      );
+      return;
+    }
 
-  currentIndex = index;
-  images[currentIndex].classList.add("active");
-  dots[currentIndex].classList.add("active");
-}
-// Iniciar a troca automática para cada banner
-changeBanner("banner1");
-changeBanner("banner2");
+    let currentIndex = 0;
+
+    setInterval(function () {
+      images[currentIndex].classList.remove("active");
+      dots[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add("active");
+      dots[currentIndex].classList.add("active");
+    }, 5000);
+  }
+
+  // Só roda se os banners existirem no HTML
+  if (document.getElementById("banner1")) changeBanner("banner1");
+  if (document.getElementById("banner2")) changeBanner("banner2");
+});
 
 // Função para trocar as imagens quando a tela for menor que 900px
 function updateBannerImages() {
@@ -127,26 +130,47 @@ updateBannerImages();
 window.addEventListener("resize", updateBannerImages);
 
 // MODAL
-// Seleciona todos os botões que devem abrir o modal
-const openModalBtns = document.querySelectorAll(".openModal");
-const modal = document.getElementById("modal");
-const closeModalBtn = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleciona todos os botões que devem abrir o modal
+  const openModalBtns = document.querySelectorAll(".openModal");
+  const modal = document.getElementById("modal");
+  const closeModalBtn = document.getElementById("closeModal");
 
-// Mostra o modal ao clicar em qualquer botão
-openModalBtns.forEach((btn) => {
-  btn.onclick = function () {
-    modal.style.display = "flex";
-  };
+  // Verifica se o modal e o botão de fechar existem antes de adicionar os eventos
+  if (modal && closeModalBtn) {
+    // Mostra o modal ao clicar em qualquer botão
+    openModalBtns.forEach((btn) => {
+      btn.onclick = function () {
+        modal.style.display = "flex";
+      };
+    });
+    // Fecha o modal ao clicar no botão de fechar
+    closeModalBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+    // Fecha o modal se clicar fora da caixa de conteúdo
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
 });
 
-// Fecha o modal ao clicar no botão de fechar
-closeModalBtn.onclick = function () {
-  modal.style.display = "none";
-};
+//planos expanded
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".planos-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      this.classList.toggle("ativo");
+    });
+  });
+});
 
-// Fecha o modal se clicar fora da caixa de conteúdo
-window.onclick = function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
+// clicoins expanded
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.querySelectorAll(".clicoins-item").forEach(function (item) {
+//     item.addEventListener("click", function () {
+//       this.classList.toggle("ativo");
+//     });
+//   });
+// });
