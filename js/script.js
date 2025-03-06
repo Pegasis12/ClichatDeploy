@@ -175,21 +175,21 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // });
 
-//galeria de imagens bicicletas
-// const galeria = document.querySelectorAll(".chat-img Img");
-// const galeriaContainer = document.querySelector(".chat-img");
+// galeria de imagens bicicletas
+const galeria = document.querySelectorAll(".chat-info-img Img");
+const galeriaContainer = document.querySelector(".chat-info-img");
 
-// function trocarImagem(event) {
-//   const Img = event.currentTarget;
-//   const media = matchMedia("(min-width: 1000px)").matches;
-//   if (media) {
-//     // metodo prepend faz com que o elemento em si mude a sequencia para primeiro, ent pela logica caso o usuario click no evento de click na imagem o prepend vai agir colocando a imagem clicada em primeiro
-//     galeriaContainer.prepend(Img);
-//   }
-// }
+function trocarImagem(event) {
+  const Img = event.currentTarget;
+  const media = matchMedia("(min-width: 1000px)").matches;
+  if (media) {
+    // metodo prepend faz com que o elemento em si mude a sequencia para primeiro, ent pela logica caso o usuario click no evento de click na imagem o prepend vai agir colocando a imagem clicada em primeiro
+    galeriaContainer.prepend(Img);
+  }
+}
 
-// function eventosGaleria(imagem) {
-//   imagem.addEventListener("click", trocarImagem);
-// }
+function eventosGaleria(imagem) {
+  imagem.addEventListener("click", trocarImagem);
+}
 
-// galeria.forEach(eventosGaleria);
+galeria.forEach(eventosGaleria);

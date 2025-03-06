@@ -1,4 +1,8 @@
 /* reset */
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding-top: 90px;
   margin: 0;
@@ -33,26 +37,29 @@ a {
   color: inherit;
 }
 
-Img, video {
+Img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /* atribui ao final de um arquivo jpg a borda de 4px*/
-Img[src$=".jpg"], Img[src$=".jpeg"], Img[src$=".png"], video{
+Img[src$=".jpg"],
+Img[src$=".jpeg"],
+Img[src$=".png"],
+video {
   border-radius: 10px;
 }
-
 
 @media (max-width: 900px) {
   body {
     padding-top: 130px;
     display: grid;
-    grid-template-columns:1fr; /* Ajustei o número de colunas para 2 */
+    grid-template-columns: 1fr; /* Ajustei o número de colunas para 2 */
     grid-template-areas:
-    "header"
-    "aside"
-    "content";
+      "header"
+      "aside"
+      "content";
   }
 }
