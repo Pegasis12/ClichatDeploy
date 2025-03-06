@@ -191,10 +191,18 @@ function trocarImagem(event) {
 function eventosGaleria(imagem) {
   imagem.addEventListener("click", trocarImagem);
 }
-
 galeria.forEach(eventosGaleria);
 
-//scrip char forcar rolagem
+//scrip chat forcar rolagem
+function ajustarAltura() {
+  const alturaJanela = window.innerHeight;
+  document.querySelector(".chat-container").style.height = `${alturaJanela}px`;
+}
+
+window.addEventListener("resize", ajustarAltura);
+ajustarAltura(); // Ajusta na inicialização
+
+// Força a rolagem quando o teclado aparece
 document.querySelector("input").addEventListener("focus", function () {
   setTimeout(() => {
     document
