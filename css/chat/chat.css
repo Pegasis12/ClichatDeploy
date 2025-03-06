@@ -185,42 +185,6 @@ body.chat-page {
   .balao-user p {
     max-width: 50ch;
   }
-
-  .chat-header {
-    padding: 10px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: solid 2px var(--cor-9);
-    position: relative; /* Remove sticky ou fixed */
-    z-index: 1; /* Garantir que ele fique por cima */
-  }
-
-  .chat-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-
-  .chat-messages {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-bottom: 16px; /* Adiciona espaço para o envio das mensagens */
-  }
-
-  .chat-input {
-    display: flex;
-    padding: 10px;
-    position: fixed; /* Fixa a barra de input no fundo */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--cor-11);
-    border-top: solid 2px var(--cor-9);
-    z-index: 100;
-    transition: bottom 0.3s ease-in-out;
-  }
 }
 
 @media (max-width: 1100px) {
