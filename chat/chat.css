@@ -1,0 +1,83 @@
+.chat{
+  grid-area: content;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.chat-contain{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-areas:
+  "chat info";
+}
+
+.chat-img{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chat-img Img {
+  flex: 1;
+  min-width: 200px;
+}
+
+.chat-img Img:first-child {
+  min-width: 100%;
+}
+
+.chat-header{
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid var(--cor-9);
+}
+
+.chat-info{
+  grid-area: info;
+  padding: 20px;
+  border-left: 2px solid var(--cor-9); 
+}
+
+.chat-conversa{
+  grid-area: chat;
+  display: flex;
+  flex-direction: column;
+}
+
+.balao-parceira{
+  background: #2E2D2D;
+  padding: 8px;
+  align-self: start;
+  border-radius: 10px 10px 10px 0px;
+}
+
+.balao-parceira p{
+  max-width: 60ch;
+}
+
+.balao{
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.balao-image{
+  align-items: start;
+}
+
+.chat-input{
+  padding: 20px;
+}
+
+.chat-input input{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: var(--cor-11);
+  border: 2px solid var(--cor-9);
+  font: 400 2rem/2 "Roboto", sans-serif;
+  color: var(--cor-0);
+}

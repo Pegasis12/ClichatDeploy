@@ -27,3 +27,7 @@
 /* seja premium */
 @import "./css/seja-premium/planos.css";
 @import "./css/seja-premium/compre-clicoins.css";
+
+
+/* chat */
+@import "./chat/chat.css";
