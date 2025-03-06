@@ -193,3 +193,12 @@ function eventosGaleria(imagem) {
 }
 
 galeria.forEach(eventosGaleria);
+
+//scrip char forcar rolagem
+document.querySelector("input").addEventListener("focus", function () {
+  setTimeout(() => {
+    document
+      .querySelector(".chat-messages")
+      .scrollIntoView({ behavior: "smooth", block: "end" });
+  }, 300);
+});
