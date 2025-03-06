@@ -24,14 +24,14 @@ body.chat-page {
   border-bottom: solid 2px var(--cor-9);
 }
 
-.status{
+.status {
   width: 12px;
   height: 12px;
-  background: #00FF40;
+  background: #00ff40;
   border-radius: 50%;
 }
 
-.chat-header-parceira{
+.chat-header-parceira {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -97,11 +97,13 @@ body.chat-page {
 }
 
 /* chat info distancias */
-.chat-intro, .chat-sobre {
+.chat-intro,
+.chat-sobre {
   margin-top: 20px;
 }
 
-.chat-intro h2, .chat-sobre h2 {
+.chat-intro h2,
+.chat-sobre h2 {
   margin-bottom: 8px;
 }
 
@@ -130,10 +132,11 @@ body.chat-page {
   padding: 8px;
   display: inline-block;
   border-radius: 0px 10px 10px 10px;
-  justify-self: start
+  justify-self: start;
 }
 
-.balao-parceira p, .balao-user p{
+.balao-parceira p,
+.balao-user p {
   max-width: 60ch;
 }
 
@@ -147,11 +150,11 @@ body.chat-page {
   align-items: start;
 }
 
-.balao-user{
+.balao-user {
   margin-top: 20px;
   background: var(--cor-7);
   padding: 8px;
-  border-radius:10px 0px 10px 10px;
+  border-radius: 10px 0px 10px 10px;
   justify-self: end;
 }
 
@@ -171,34 +174,89 @@ body.chat-page {
   background: var(--cor-11);
 }
 
-@media(max-width: 1320px){
+@media (max-width: 1320px) {
   .chat {
     grid-template-columns: 1fr 300px;
-  }  
+  }
 }
 
-@media(max-width: 1220px){
-  .balao-parceira p, .balao-user p{
+@media (max-width: 1220px) {
+  .balao-parceira p,
+  .balao-user p {
     max-width: 50ch;
   }
 
   body.chat-page {
-    height: 100dvh;
+    height: 100dvh; /* Usa dynamic viewport height para mobile */
+    overflow: hidden; /* Evita rolagem indesejada */
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .chat-container {
-    height: 100dvh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 16px; /* Evita que a última mensagem fique escondida */
+  }
+
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    position: fixed; /* Fixa no fundo para evitar bugs */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--cor-11);
+    border-top: solid 2px var(--cor-9);
+    z-index: 100;
   }
 }
 
-@media(max-width: 1100px){
-  .balao-parceira p, .balao-user p{
+@media (max-width: 1100px) {
+  .balao-parceira p,
+  .balao-user p {
     max-width: 40ch;
   }
+
+  .chat-header {
+    padding: 6px;
+  }
+
+  .chat-header-parceira img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chat-input input {
+    background: var(--cor-11);
+    border-radius: 5px;
+    flex: 1;
+    font: 400 1rem/1.5 "Poppins", sans-serif;
+    padding: 8px 0px 8px 50px;
+    border: 2px solid var(--cor-9);
+    color: var(--cor-0);
+  }
+
+  .enviar img{
+    width: 16px;
+    height: 16px;
+  }
+
+  .enviar {
+    border-radius: 50%;
+    padding: 8px;
+  }
 }
 
-@media(max-width: 1020px){
-  .chat-info{
+@media (max-width: 1020px) {
+  .chat-info {
     display: none;
   }
 
@@ -210,14 +268,15 @@ body.chat-page {
     padding-bottom: 240px;
   }
 
-  .balao-parceira p, .balao-user p{
+  .balao-parceira p,
+  .balao-user p {
     max-width: 60ch;
   }
 }
 
-@media(max-width: 600px){
-  .balao-parceira p, .balao-user p{
+@media (max-width: 600px) {
+  .balao-parceira p,
+  .balao-user p {
     max-width: 30ch;
   }
 }
-
