@@ -196,17 +196,24 @@ galeria.forEach(eventosGaleria);
 //scrip chat forcar rolagem
 function ajustarAltura() {
   const alturaJanela = window.innerHeight;
-  document.querySelector(".chat-container").style.height = `${alturaJanela}px`;
+  const body = document.querySelector("body");
+  const chatContainer = document.querySelector(".chat-container");
+
+  // Ajusta a altura do body e da área do chat
+  body.style.height = `${alturaJanela}px`;
+  chatContainer.style.height = `${alturaJanela}px`;
+
+  // Adiciona padding-bottom para garantir que o conteúdo não sobreponha o input
+  const chatMessages = document.querySelector(".chat-messages");
+  chatMessages.style.paddingBottom = `${alturaJanela < 600 ? 200 : 0}px`; // Ajuste para telas pequenas
 }
 
 window.addEventListener("resize", ajustarAltura);
-ajustarAltura(); // Ajusta na inicialização
+ajustarAltura(); // Chama na inicialização
 
-// Força a rolagem quando o teclado aparece
+// Forçar o foco do input para rolar até o final da conversa quando o teclado aparece
 document.querySelector("input").addEventListener("focus", function () {
   setTimeout(() => {
-    document
-      .querySelector(".chat-messages")
-      .scrollIntoView({ behavior: "smooth", block: "end" });
+    document.querySelector(".chat-messages").scrollIntoView({ behavior: "smooth", block: "end" });
   }, 300);
 });
