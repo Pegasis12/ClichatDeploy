@@ -1,6 +1,6 @@
 body.chat-page {
   height: 100vh;
-  overflow: hidden; /* Desabilita a rolagem do body */
+  overflow: hidden;
 }
 
 .chat {
@@ -10,7 +10,7 @@ body.chat-page {
 }
 
 .chat-container {
-  display: flex; /* Flexbox para distribuir o conteúdo */
+  display: flex;
   flex-direction: column;
   height: 100vh;
 }
@@ -21,8 +21,7 @@ body.chat-page {
   gap: 20px;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid 2px var(--cor-9);
-  grid-column: 1 / -1; /* Garante que o header ocupe apenas a primeira coluna */
+  border-bottom: 2px solid var(--cor-9);
 }
 
 .status {
@@ -43,21 +42,20 @@ body.chat-page {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow-y: auto; /* Rolagem nas mensagens */
-  flex-grow: 1; /* Permite que a área de mensagens ocupe o máximo de altura possível sem cortar conteúdo */
-  padding-bottom: 200px; /* Adiciona padding para compensar o input fixo */
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-bottom: 200px;
 }
 
 .chat-input {
   display: flex;
   padding: 10px;
-  position: sticky; /* Fica fixo dentro da coluna */
-  bottom: 0; /* Fica no fundo da coluna */
-  width: 100%; /* Largura 100% da coluna */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
   background: var(--cor-11);
   border-top: solid 2px var(--cor-9);
   z-index: 1;
-  grid-column: 1 / -1; /* Garante que o input ocupe apenas a primeira coluna */
 }
 
 .chat-input input {
@@ -92,13 +90,11 @@ body.chat-page {
   background: none;
 }
 
-/* chat info */
 .chat-info {
   padding: 20px;
   border-left: 2px solid var(--cor-9);
 }
 
-/* chat info distancias */
 .chat-intro,
 .chat-sobre {
   margin-top: 20px;
@@ -119,13 +115,9 @@ body.chat-page {
   cursor: pointer;
 }
 
-.chat-info-img Img {
+.chat-info-img img {
   flex: 1;
   min-width: 30px;
-}
-
-.chat-info-img Img:first-child {
-  min-width: 100%;
 }
 
 .balao-parceira {
@@ -134,7 +126,6 @@ body.chat-page {
   padding: 8px;
   display: inline-block;
   border-radius: 0px 10px 10px 10px;
-  justify-self: start;
 }
 
 .balao-parceira p,
@@ -148,19 +139,13 @@ body.chat-page {
   gap: 8px;
 }
 
-.balao-image {
-  align-items: start;
-}
-
 .balao-user {
   margin-top: 20px;
   background: var(--cor-7);
   padding: 8px;
   border-radius: 10px 0px 10px 10px;
-  justify-self: end;
 }
 
-/* scroll bar */
 .chat-messages::-webkit-scrollbar {
   width: 16px;
 }
@@ -176,90 +161,21 @@ body.chat-page {
   background: var(--cor-11);
 }
 
-/* Responsividade */
 @media (max-width: 1320px) {
   .chat {
-    grid-template-columns: 1fr 300px;
+      grid-template-columns: 1fr 300px;
   }
 }
 
 @media (max-width: 1220px) {
   .balao-parceira p,
   .balao-user p {
-    max-width: 50ch;
+      max-width: 50ch;
   }
 }
 
 @media (max-width: 1100px) {
-  .header-menu-second {
-    display: none;
-  }
-
-  .balao-parceira p,
-  .balao-user p {
-    max-width: 40ch;
-  }
-
   .chat-header {
-    padding: 6px;
-  }
-
-  .chat-header-parceira img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .chat-input input {
-    background: var(--cor-11);
-    border-radius: 5px;
-    flex: 1;
-    font: 400 1rem/1.5 "Poppins", sans-serif;
-    padding: 8px 0px 8px 50px;
-    border: 2px solid var(--cor-9);
-    color: var(--cor-0);
-  }
-
-  .enviar img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .enviar {
-    border-radius: 50%;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 1020px) {
-  body.chat-page {
-    padding-top: 80px;
-  }
-
-  .chat-info {
-    display: none;
-  }
-
-  .chat {
-    grid-template-columns: 1fr;
-  }
-
-  .chat-messages {
-    padding-bottom: 240px;
-  }
-
-  .chat-header, .chat-input {
-    grid-column: auto; /* Garante que eles permaneçam na primeira coluna */
-  }
-
-  .balao-parceira p,
-  .balao-user p {
-    max-width: 60ch;
-  }
-}
-
-@media (max-width: 600px) {
-  .balao-parceira p,
-  .balao-user p {
-    max-width: 30ch;
+      padding: 6px;
   }
 }
