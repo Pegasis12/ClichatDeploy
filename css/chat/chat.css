@@ -10,7 +10,7 @@ body.chat-page {
 }
 
 .chat-container {
-  display: flex; /* Flexbox para distribuir o conteúdo */
+  display: flex;
   flex-direction: column;
   height: 100vh;
 }
@@ -22,10 +22,6 @@ body.chat-page {
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 2px var(--cor-9);
-  position: sticky; /* Torna o header fixo */
-  top: 0; /* Fixa o header no topo da tela */
-  z-index: 10; /* Garante que o header fique sobre outros elementos */
-  background-color: var(--cor-11); /* Evita que o fundo do header seja transparente */
 }
 
 .status {
