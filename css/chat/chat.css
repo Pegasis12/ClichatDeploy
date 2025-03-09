@@ -1,5 +1,5 @@
 body.chat-page {
-  height: 100dvh; /* Usa altura dinâmica para evitar problemas com teclado */
+  height: 100vh;
   overflow: hidden; /* Desabilita a rolagem do body */
 }
 
@@ -12,7 +12,7 @@ body.chat-page {
 .chat-container {
   display: flex; /* Flexbox para distribuir o conteúdo */
   flex-direction: column;
-  height: 100dvh; /* Usa a altura dinâmica da tela */
+  height: 100vh;
 }
 
 .chat-header {
@@ -22,10 +22,10 @@ body.chat-page {
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 2px var(--cor-9);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--cor-11); /* Garante que o fundo do header não fique transparente */
+  position: sticky; /* Torna o header fixo */
+  top: 0; /* Fixa o header no topo da tela */
+  z-index: 10; /* Garante que o header fique sobre outros elementos */
+  background-color: var(--cor-11); /* Evita que o fundo do header seja transparente */
 }
 
 .status {
@@ -48,14 +48,14 @@ body.chat-page {
   gap: 10px;
   overflow-y: auto; /* Rolagem nas mensagens */
   flex-grow: 1; /* Permite que a área de mensagens ocupe o máximo de altura possível sem cortar conteúdo */
-  padding-bottom: 100px; /* Ajusta para evitar sobreposição do teclado */
+  padding-bottom: 200px; /* Adiciona padding para compensar o input fixo */
 }
 
 .chat-input {
   display: flex;
   padding: 10px;
-  position: sticky; /* Fixa o input */
-  bottom: 0; /* Mantém no fundo */
+  position: sticky; /* Fica fixo dentro da coluna */
+  bottom: 0; /* Fica no fundo da coluna */
   width: 100%; /* Largura 100% da coluna */
   background: var(--cor-11);
   border-top: solid 2px var(--cor-9);
@@ -178,7 +178,6 @@ body.chat-page {
   background: var(--cor-11);
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 1320px) {
   .chat {
     grid-template-columns: 1fr 300px;
@@ -196,7 +195,7 @@ body.chat-page {
   .header-menu-second {
     display: none;
   }
-
+   
   .balao-parceira p,
   .balao-user p {
     max-width: 40ch;
@@ -212,7 +211,13 @@ body.chat-page {
   }
 
   .chat-input input {
+    background: var(--cor-11);
+    border-radius: 5px;
+    flex: 1;
+    font: 400 1rem/1.5 "Poppins", sans-serif;
     padding: 8px 0px 8px 50px;
+    border: 2px solid var(--cor-9);
+    color: var(--cor-0);
   }
 
   .enviar img {
@@ -221,6 +226,7 @@ body.chat-page {
   }
 
   .enviar {
+    border-radius: 50%;
     padding: 8px;
   }
 }
@@ -239,7 +245,7 @@ body.chat-page {
   }
 
   .chat-messages {
-    padding-bottom: 120px; /* Evita que mensagens fiquem ocultas pelo teclado */
+    padding-bottom: 240px;
   }
 
   .balao-parceira p,
